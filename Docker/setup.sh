@@ -7,7 +7,10 @@ PROJECT_DIR="${TSM_DIR}/scripts/projects"
 function clone_repository() {
   echo "Cloning tsm-rv repository"
   pushd ${SCRIPT_DIR}
-  git clone https://github.com/papersubmission321/rv tsm-rv
+  git clone https://github.com/SoftEngResearch/rv-study-artifacts tsm-rv
+  cd tsm-rv
+  git checkout no-profiling
+  cd ..
   
   mkdir -p ${TSM_DIR}/extensions
   mkdir -p ${TSM_DIR}/mop/agents

@@ -256,30 +256,6 @@ function run_pipeline() {
     # Step 3
     check_ctw_overhead
   fi
-  
-  if [[ ${START} -le 4 && ${END} -ge 4 ]]; then
-    # Step 4
-    run_profiler_for_mop_and_no_mop
-  fi
-  
-  if [[ ${START} -le 5 && ${END} -ge 5 ]]; then
-    # Step 5
-    get_hot_methods_via_profiler
-  fi
-  
-  if [[ ${START} -le 6 && ${END} -ge 6 ]]; then
-    # Step 6
-    remove_hot_methods_time
-  fi
-  
-  if [[ ${START} -le 7 && ${END} -ge 7 ]]; then
-    # Step 7
-    run_profiler_for_no_hot_time
-  fi
-  
-  if [[ ${START} -le 8 && ${END} -ge 8 ]]; then
-    convert_profiler_result
-  fi
 }
 
 export RVMLOGGINGLEVEL=UNIQUE
